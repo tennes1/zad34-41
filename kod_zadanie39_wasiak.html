@@ -1,0 +1,65 @@
+<html> 
+   <body> 
+     <textarea cols="110" rows="35">
+
+
+
+<!DOCTYPE html>
+    <html lang="pl">
+        <head>
+<meta charset="UTF-8">
+        <title>Zadanie 39</title>
+
+<script>
+
+function zmiana() {
+
+        let wybor = document.querySelector('input[name="kolor"]:checked').value;
+
+        let menu = document.getElementById("menu");
+
+if(wybor == "1")
+    {
+menu.style.color = "red";
+    }
+else if(wybor == "2")
+        {
+menu.style.color = "blue";
+        }
+
+}
+
+</script>
+</head>
+<body>
+<h2>MENU</h2>
+<div id="menu" style="font-size:22px">
+
+<p>1 - CZERWONY</p>
+<p>2 - NIEBIESKI</p>
+
+
+
+</div>
+<hr>
+<form>
+
+
+<input type="radio" name="kolor" value="1"> 1 - Czerwony<br>
+<input type="radio" name="kolor" value="2"> 2 - Niebieski<br><br>
+<input type="button" value="Sprawdź" onclick="zmiana()">
+
+
+
+</form>
+
+<br>
+Autor: Wasiak (nr 27)
+
+</body>
+</html>
+
+        </textarea> 
+    </body> 
+
+</html>

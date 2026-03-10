@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+    <html lang="pl">
+        <head>
+<meta charset="UTF-8">
+            <title>Zadanie 40</title>
+
+<script>
+
+function oblicz() {
+
+    let x = parseFloat(document.getElementById("x").value);
+    let f;
+
+if(x < 0)
+    {
+f = -0.5 * x;
+    }
+else if(x >= 0 && x <= 1)
+        {
+f = x;
+        }
+else
+            {
+f = 0.5 * x + 1;
+            }
+
+document.getElementById("wynik").innerHTML = "x = " + x + "<br> f(x) = " + f;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Program obliczania wartości funkcji</h2>
+
+Podaj x:
+        <input type="number" id="x" step="0.01">
+
+<button onclick="oblicz()">Oblicz</button>
+
+        <p id="wynik"></p>
+
+</body>
+</html>

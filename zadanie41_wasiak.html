@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Proste działania - Zamojski</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#2e87c2;
+}
+
+.okno{
+    width:1000px;
+    margin:100px auto;
+    border:7px solid black;
+    padding:80px;
+    background:#2da2f0;
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    margin:7px;
+}
+
+button{
+    margin:4px;
+    padding:7px 11px;
+}
+
+#wynik{
+    margin-top:10px;
+    font-weight:bold;
+}
+</style>
+<script>
+
+function sprawdz(a,b)
+{
+    if(a=="" || b=="")
+    {
+        document.getElementById("wynik").innerHTML="Wpisz obie liczby!";
+        return false;
+    }
+
+    return true;
+}
+
+function dodawanie()
+{
+    var a=document.getElementById("a").value;
+    var b=document.getElementById("b").value;
+
+    if(!sprawdz(a,b)) return;
+
+    a=parseFloat(a);
+    b=parseFloat(b);
+
+    var suma=a+b;
+
+    document.getElementById("wynik").innerHTML="Wynik dodawania wynosi: "+suma;
+}
+
+function odejmowanie()
+{
+    var a=document.getElementById("a").value;
+    var b=document.getElementById("b").value;
+
+    if(!sprawdz(a,b)) return;
+
+    a=parseFloat(a);
+    b=parseFloat(b);
+
+    var roznica=a-b;
+
+    document.getElementById("wynik").innerHTML="Wynik odejmowania wynosi: "+roznica;
+}
+
+function mnozenie()
+{
+    var a=document.getElementById("a").value;
+    var b=document.getElementById("b").value;
+
+    if(!sprawdz(a,b)) return;
+
+    a=parseFloat(a);
+    b=parseFloat(b);
+
+    var iloczyn=a*b;
+
+    document.getElementById("wynik").innerHTML="Wynik mnożenia wynosi: "+iloczyn;
+}
+
+function dzielenie()
+{
+    var a=document.getElementById("a").value;
+    var b=document.getElementById("b").value;
+
+    if(!sprawdz(a,b)) return;
+
+    a=parseFloat(a);
+    b=parseFloat(b);
+
+    if(b==0)
+    {
+        document.getElementById("wynik").innerHTML="Nie można dzielić przez zero!";
+        return;
+    }
+
+    var iloraz=a/b;
+
+    document.getElementById("wynik").innerHTML="Wynik dzielenia wynosi: "+iloraz;
+}
+
+</script>
+</head>
+<body>
+<div class="okno">
+
+<h1>PROSTE DZIAŁANIA</h1>
+
+<b>WASIAK</b></p>
+
+Podaj pierwszą liczbę:<br>
+<input type="number" id="a">
+
+<br>
+
+Podaj drugą liczbę:<br>
+<input type="number" id="b">
+
+<br><br>
+
+<button onclick="dodawanie()">DODAWANIE</button>
+<button onclick="odejmowanie()">ODEJMOWANIE</button>
+<button onclick="mnozenie()">MNOŻENIE</button>
+<button onclick="dzielenie()">DZIELENIE</button>
+
+<div id="wynik">Wynik działania:</div>
+
+</div>
+
+</body>
+
+</html>

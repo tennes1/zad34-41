@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 38 - Zamojski</title>
+
+<script>
+function sprawdz() {
+
+let szer = screen.width;
+let wys = screen.height;
+
+    document.getElementById("wynik").innerHTML =
+"Twoja rozdzielczość ekranu: " + szer + " x " + wys;
+
+if(szer >= 1024 && wys >= 768)
+            {
+    document.getElementById("info").innerHTML =
+"Twoja rozdzielczość jest wystarczająca do poprawnego wyświetlania strony.";
+            }
+else
+        {
+    document.getElementById("info").innerHTML =
+"Twoja rozdzielczość jest zbyt mała. Zalecana to minimum 1024x768.";
+        }
+
+    }
+</script>
+
+    </head>
+
+        <body onload="sprawdz()">
+
+    <p id="wynik"></p>
+    <p id="info"></p>
+
+</body>
+</html>
